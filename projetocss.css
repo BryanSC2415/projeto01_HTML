@@ -1,7 +1,12 @@
 body {
   background-color: #0a0a0f;
   color: #e8e8f0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
   line-height: 1.6;
 }
 
@@ -51,7 +56,6 @@ nav .tag {
   white-space: nowrap;
   flex-shrink: 0;
 }
-
 
 main {
   margin-left: 220px;
@@ -178,6 +182,53 @@ nav::-webkit-scrollbar-thumb {
   background: #f5b700;
 }
 
+@media (max-width: 900px) {
+  nav {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    box-sizing: border-box;
+  }
 
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
 
+  nav li {
+    margin-bottom: 0;
+  }
 
+  nav a {
+    border-left: none;
+    border: 1px solid transparent;
+    padding: 10px 14px;
+  }
+
+  nav a:hover {
+    border-color: #ff003c;
+  }
+
+  main {
+    margin-left: 0;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 16px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  main img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+}
